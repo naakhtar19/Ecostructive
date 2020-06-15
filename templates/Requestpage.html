@@ -1,0 +1,121 @@
+
+<!DOCTYPE HTML>
+{% load static %}
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Place a Request</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Place a Request</h1>
+						<p>Fill in your details and have your garbage picked up!</p>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+
+
+
+								<!-- Form -->
+									<section>
+										<h2>Form</h2>
+										<form method="post" action="success/">
+											{% csrf_token %}
+											<div class="row gtr-uniform">
+												<div class="col-6 col-12-xsmall">
+													Name:<input type="text" name="name" id="demo-name" value="" placeholder="Name" />
+												</div>
+												<div class="col-6 col-12-xsmall">
+													Email:<input type="email" name="email" id="demo-email" value="" placeholder="Email" />
+												</div>
+												<h3>Address:</h3>
+												<div class="col-12">
+													<textarea name="address" id="demo-message" placeholder="Enter your address" rows="6"></textarea>
+												</div>
+												<div class="col-12">
+													Choose a category:
+													<select name="category" id="demo-category">
+														<option value="">- Category -</option>
+														<option value="Plastic">Plastic</option>
+														<option value="Glass">Glass</option>
+														<option value="Tin">Tin</option>
+														<option value="Paper">Paper</option>
+													</select>
+												</div>
+												<h3>Choose a time slot:</h3>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="demo-priority-low" name="timeslot" checked>
+													<label for="demo-priority-low">9am - 11am</label>
+												</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="demo-priority-normal" name="timeslot">
+													<label for="demo-priority-normal">1pm - 3pm</label>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" value="Place Request" class="primary" /></li>
+														<li><input type="reset" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section>
+							<h2>Etiam feugiat</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd>
+								<dt>Email</dt>
+								<dd><a href="#">information@untitled.tld</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'js/browser.min.js' %}"></script>
+			<script src="{% static 'js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
